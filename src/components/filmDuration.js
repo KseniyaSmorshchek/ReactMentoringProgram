@@ -1,7 +1,7 @@
 import React from 'react';
 
-const SelectedFilmDuration = () => (
-    <span className="film__duration">154 min</span>
+const FilmDuration = ({duration}) => (
+    <span className="film__duration">{duration} min</span>
 );
 
-export default SelectedFilmDuration;
+export default FilmDuration;

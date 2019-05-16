@@ -1,10 +1,10 @@
 import React from 'react';
 
-const FilmsSort = () => (
+const FilmsSort = ({onSortClick}) => (
     <>
         Sort by:
-        <span class="main__founded-sort-button main__sort-button--selected">release date</span>
-        <span class="main__founded-sort-button">rating</span>
+        <a href="#" className="main__founded-sort-button" data-sort="year" onClick={onSortClick}>release date</a>
+        <a href="#" className="main__founded-sort-button" data-sort="rating" onClick={onSortClick}>rating</a>
     </>
 );
 
