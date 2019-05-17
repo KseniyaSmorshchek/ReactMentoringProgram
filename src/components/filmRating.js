@@ -1,7 +1,7 @@
 import React from 'react';
 
-const FilmRating = () => (
-    <span className="film__rating">4.1</span>
+const FilmRating = ({rating}) => (
+    <span className="film__rating">{rating}</span>
 );
 
 export default FilmRating;
