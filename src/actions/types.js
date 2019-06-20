@@ -1,0 +1,5 @@
+export const SHOW_FILMS = 'SHOW_FILMS';
+export const SORT_FILMS = 'SORT_FILMS';
+export const TOGGLE_SEARCH = 'TOGGLE_SEARCH';
+export const SET_SELECTED_FILM = 'SET_SELECTED_FILM';
+export const SET_SEARCH_FILTER = 'SET_SEARCH_FILTER';

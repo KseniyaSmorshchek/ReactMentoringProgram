@@ -1,12 +1,30 @@
 import React from 'react';
 
-const SearchFilter = () => (
+const SearchFilter = ({searchBy, searchByClick}) => (
   <>
     Search by:
-    <span className="search__filter-button search__filter-button--selected">
+    <a
+      href="#"
+      className={
+        'search__filter-button ' +
+        (searchBy === 'title' ? 'search__filter-button--selected' : '')
+      }
+      data-search="title"
+      onClick={searchByClick}
+    >
       title
-    </span>
-    <span className="search__filter-button">genre</span>
+    </a>
+    <a
+      href="#"
+      className={
+        'search__filter-button ' +
+        (searchBy === 'genre' ? 'search__filter-button--selected' : '')
+      }
+      data-search="genre"
+      onClick={searchByClick}
+    >
+      genre
+    </a>
   </>
 );
 
