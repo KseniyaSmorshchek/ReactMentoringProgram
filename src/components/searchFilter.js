@@ -18,9 +18,9 @@ const SearchFilter = ({searchBy, searchByClick}) => (
       href="#"
       className={
         'search__filter-button ' +
-        (searchBy === 'genre' ? 'search__filter-button--selected' : '')
+        (searchBy === 'genres' ? 'search__filter-button--selected' : '')
       }
-      data-search="genre"
+      data-search="genres"
       onClick={searchByClick}
     >
       genre
