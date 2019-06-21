@@ -15,7 +15,7 @@ const FilmItem = ({onFilmSelect, item}) => {
         <div className="d-flex justify-content-around">
           <div className="item__data">
             <FilmTitle title={title} />
-            <FilmGenre genre={genres[0]} />
+            <FilmGenre genres={genres} />
           </div>
           <FilmYear date={release_date} />
         </div>

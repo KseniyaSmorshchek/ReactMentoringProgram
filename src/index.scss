@@ -113,6 +113,10 @@ body {
     .item {
       &__data {
         max-width: 80%;
+
+        &-genre {
+          font-size: 14px;
+        }
       }
       .title {
         font-size: 1.5rem;
@@ -141,10 +145,6 @@ body {
         }
       }
     }
-  }
-
-  &__genre {
-    font-weight: lighter;
   }
 }
 

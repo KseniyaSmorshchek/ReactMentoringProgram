@@ -1,5 +1,7 @@
 import React from 'react';
 
-const FilmGenre = ({genre}) => <p className="item__data-genre">{genre}</p>;
+const FilmGenre = ({genres}) => (
+  <p className="item__data-genre">{genres.join(', ')}</p>
+);
 
 export default FilmGenre;
