@@ -8,6 +8,8 @@ const Header = props => {
     filmsData,
     searchButtonHandler,
     onSearchLinkClick,
+    searchBy,
+    searchByClick,
   } = props;
   return (
     <header className="header py-4 mb-2">
@@ -25,7 +27,11 @@ const Header = props => {
             onSearchLinkClick={onSearchLinkClick}
           />
         ) : (
-          <HeaderSearch searchButtonHandler={searchButtonHandler} />
+          <HeaderSearch
+            searchButtonHandler={searchButtonHandler}
+            searchBy={searchBy}
+            searchByClick={searchByClick}
+          />
         )}
       </div>
     </header>

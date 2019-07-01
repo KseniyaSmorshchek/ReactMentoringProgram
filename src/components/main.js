@@ -4,7 +4,7 @@ import FilmsList from './filmList';
 import NoFilmsMessage from './noFilmsMessage';
 
 const Main = props => {
-  const {filmsData, selectedGenre, onSortClick, onFilmSelect} = props;
+  const {filmsData, onSortClick, onFilmSelect, sortBy} = props;
   return (
     <main className="main py-3">
       <div className="container">
@@ -13,6 +13,7 @@ const Main = props => {
             <FoundedData
               filmsNum={filmsData.length}
               onSortClick={onSortClick}
+              sortBy={sortBy}
             />
             <FilmsList filmsData={filmsData} onFilmSelect={onFilmSelect} />
           </>

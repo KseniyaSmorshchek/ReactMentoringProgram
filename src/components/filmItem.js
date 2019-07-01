@@ -5,20 +5,19 @@ import FilmGenre from './filmGenre';
 import FilmYear from './filmYear';
 
 const FilmItem = ({onFilmSelect, item}) => {
-  const {filmImg, filmTitle, filmGenre, filmYear, id} = item;
-
+  const {poster_path, title, genres, release_date, id} = item;
   return (
-    <div className="item col-4">
+    <div className="item col-4 mb-4">
       <a href="#" id={id} onClick={onFilmSelect}>
         <div className="item__img d-flex justify-content-center mb-3">
-          <FilmImg url={filmImg} />
+          <FilmImg url={poster_path} />
         </div>
         <div className="d-flex justify-content-around">
           <div className="item__data">
-            <FilmTitle title={filmTitle} />
-            <FilmGenre genre={filmGenre} />
+            <FilmTitle title={title} />
+            <FilmGenre genres={genres} />
           </div>
-          <FilmYear year={filmYear} />
+          <FilmYear date={release_date} />
         </div>
       </a>
     </div>
