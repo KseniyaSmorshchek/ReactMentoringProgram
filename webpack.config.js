@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   context: path.join(__dirname, 'src'),
@@ -12,16 +13,35 @@ module.exports = {
   },
 
   resolve: {
-      extensions: ['.js']
+      extensions: ['.js', '.jsx']
   },
 
   module: {
       rules: [
           {
-              test: /\.jsx?$/,
+              test: /\.(js|jsx)?$/,
+              exclude: /node_modules/,
+              use: ['babel-loader']
+          },
+          {
+              test: /\.scss$/,
+              use: ['style-loader', 'css-loader', 'sass-loader']
+          },
+          {
+              test: /\.css$/,
+              use: ['style-loader', 'css-loader']
           }
       ]
   },
 
-    watch: false
+  plugins: [
+      new HtmlWebpackPlugin({
+          template: "../public/index.html"
+      })
+  ],
+  devServer: {
+      stats: 'errors-only'
+  },
+
+  watch: true
 };
